@@ -22,7 +22,7 @@ class Queue:
         return self.size
 
     def enqueue(self, value):
-        # add the new value to the tail
+        # add the new value to the tail of the list
         self.size += 1
         self.storage.add_to_tail(value)
 
@@ -31,5 +31,5 @@ class Queue:
             return None
         #remove the value from the head of list
         self.size -= 1
-        value = self.storage.remove_head  
+        value = self.storage.remove_head()  
         return value  

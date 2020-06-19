@@ -23,11 +23,13 @@ class Stack:
     def push(self, value):
         #add element to the front of the array
         self.size += 1
-        self.storage.insert(value)
+        self.storage.add_to_head(value)
         
     def pop(self):
-        if len(self.storage) == 0:
+        # check if empty
+        if self.__sizeof__ == 0:
             return None
-        # remove first element
-        node = self.storage.pop(0) 
-        return node.value   
+        # remove first element in storage
+        self.size -= 1
+        node = self.storage.remove_head() 
+        return node  
