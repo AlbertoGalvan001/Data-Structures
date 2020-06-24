@@ -178,13 +178,15 @@ class LinkedList:
         return self.head.value  
 
     # loop through each node 
+    self.length += 1
+    # set current node to head
     current_node = self.head
     # establish an incramental value
     incrament = 0
     # track the max value
     max_value = 0
 
-    #incrament to mark our index through the length of list
+   #incrament to mark our index through the length of list
     while incrament < self.length:
         #add 1 to the incrament
         incrament += 1

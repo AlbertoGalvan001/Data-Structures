@@ -167,8 +167,19 @@ class LinkedList:
       # otherwise, go to the next node
       current_node = current_node.next_node
     return False 
+
+   def get_max(self):
+        if not self.head:
+            return None
+        max_val = self.head.value
+        current = self.head
+        while current:
+            if current.value > max_val:
+                max_val = current.value
+            current = current.next
+        return max_val  
   
-  def get_max(self):
+  """def get_max(self):
     #if list is empty, do nothing
     if not self.head:
         return None
@@ -195,4 +206,4 @@ class LinkedList:
         current_node = current_node.next_node
 
     #once all nodes have been checked, return max_value
-    return max_value 
+    return max_value"""
