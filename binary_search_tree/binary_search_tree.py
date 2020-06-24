@@ -32,7 +32,7 @@ class BSTNode:
         # if new value is > self.value
         if self.value <= value:
             # If self.right is already taken by a node
-            if self.right is None:
+           if self.right is None:
                 #make that (right) node call insert
                 self.right = BSTNode(value)
             # set the right child to the new node with the new value   
